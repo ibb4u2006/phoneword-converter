@@ -1,4 +1,4 @@
-import { convertNumberToPhonewords } from "@/styles/utils/converter";
+import { convertNumberToPhonewords } from "utils/converter";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type ResponseData = {

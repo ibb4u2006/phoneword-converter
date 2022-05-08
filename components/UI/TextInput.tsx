@@ -1,9 +1,13 @@
 import { Heading, InputField } from "@kiwicom/orbit-components";
 import * as React from "react";
 
-interface ITextInputProps {}
+interface ITextInputProps {
+  handleChange: (e: any) => Promise<void>;
+}
 
-const TextInput: React.FunctionComponent<ITextInputProps> = (props) => {
+const TextInput: React.FunctionComponent<ITextInputProps> = ({
+  handleChange,
+}) => {
   return (
     <div>
       <Heading as="h2">Numeric Text Input</Heading>
@@ -15,6 +19,7 @@ const TextInput: React.FunctionComponent<ITextInputProps> = (props) => {
         type="number"
         inputMode="numeric"
         help="Insert numeric string only"
+        onChange={handleChange}
       />
     </div>
   );

@@ -8,8 +8,7 @@ export default function Home() {
         <title>Phoneword Converter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Heading as="h1">Phoneword Converter</Heading>
-      <main></main>
+      <Heading as="h2">Phoneword Converter</Heading>
       <footer></footer>
     </>
   );

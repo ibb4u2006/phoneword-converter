@@ -8,7 +8,7 @@ const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

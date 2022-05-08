@@ -1,6 +1,7 @@
 import { Heading } from "@kiwicom/orbit-components";
 import Head from "next/head";
 import Container from "./components/UI/Container";
+import ResultBox from "./components/UI/ResultBox";
 import TextInput from "./components/UI/TextInput";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Container>
         <TextInput />
+        <ResultBox />
       </Container>
     </>
   );

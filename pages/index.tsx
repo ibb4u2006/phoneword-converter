@@ -1,5 +1,7 @@
 import { Heading } from "@kiwicom/orbit-components";
 import Head from "next/head";
+import Container from "./components/UI/Container";
+import TextInput from "./components/UI/TextInput";
 
 export default function Home() {
   return (
@@ -8,8 +10,9 @@ export default function Home() {
         <title>Phoneword Converter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Heading as="h2">Phoneword Converter</Heading>
-      <footer></footer>
+      <Container>
+        <TextInput />
+      </Container>
     </>
   );
 }

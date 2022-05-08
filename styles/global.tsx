@@ -1,26 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
-    html,
-body {
-  padding: 0;
+const GlobalStyle = createGlobalStyle`
+html,body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Mulish", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1,
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 footer {
@@ -32,29 +26,44 @@ footer {
   align-items: center;
 }
 
-footer img {
-  margin-left: 0.5rem;
+h1, h2, h3, h4, h5, h6, li {
+  font-family: "Lora", "sans-serif";
+  margin: 0;
 }
 
-footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 57.6px;
+}
+
+h3, li {
+    font-size: 22px;
+    line-height: 30.8px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 25.2px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+p {
+  margin: 0;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
-}
-
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+    color: inherit;
+  }
 }
 `;
 
-export default GlobalStyles;
+export default GlobalStyle;

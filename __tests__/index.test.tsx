@@ -5,10 +5,10 @@ describe("Home", () => {
   it("renders a heading", () => {
     render(<Home />);
 
-    const heading = screen.getByRole("heading", {
-      name: /phoneword converter/i,
+    const inputHeading = screen.getByRole("heading", {
+      name: /Numeric Text Input/i,
     });
 
-    expect(heading).toBeInTheDocument();
+    expect(inputHeading).toBeInTheDocument();
   });
 });

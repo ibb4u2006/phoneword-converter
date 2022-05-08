@@ -1,3 +1,4 @@
+import { createToast } from "@kiwicom/orbit-components";
 import Head from "next/head";
 import * as React from "react";
 import { postNumericInput } from "utils/api";
@@ -16,9 +17,33 @@ const Home: React.FunctionComponent = () => {
   const [word, setWord] = React.useState<IWordState>({ result: "" });
   const [inputValue, setInputValue] = React.useState<string[]>([]);
 
-  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeHandler = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setInputValue(value.toString().split(""));
+  };
+
+  const clickHandler = async (input: string) => {
+    switch (input) {
+      case "*":
+        createToast("* is not a valid numeric input");
+        setInputValue([...inputValue]);
+        break;
+      case "0":
+        createToast("0 does not have phoneword");
+        setInputValue([...inputValue]);
+        break;
+      case "#":
+        createToast("# is not a valid numeric input");
+        setInputValue([...inputValue]);
+        break;
+      case "1":
+        inputValue.splice(-1);
+        setInputValue([...inputValue]);
+        break;
+      default:
+        setInputValue([...inputValue, input]);
+        break;
+    }
   };
 
   React.useEffect(() => {
@@ -45,9 +70,9 @@ const Home: React.FunctionComponent = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <TextInput handleChange={handleChange} />
+        <TextInput input={inputValue.join("")} handleChange={changeHandler} />
         <ResultBox result={word.result} />
-        <Keypad />
+        <Keypad handleClick={clickHandler} />
       </Container>
     </>
   );

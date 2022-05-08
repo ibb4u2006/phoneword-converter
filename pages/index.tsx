@@ -1,6 +1,7 @@
 import { Heading } from "@kiwicom/orbit-components";
 import Head from "next/head";
 import Container from "./components/UI/Container";
+import Keypad from "./components/UI/Keypad";
 import ResultBox from "./components/UI/ResultBox";
 import TextInput from "./components/UI/TextInput";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Container>
         <TextInput />
         <ResultBox />
+        <Keypad />
       </Container>
     </>
   );

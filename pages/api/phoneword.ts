@@ -13,7 +13,14 @@ export default function handler(
     try {
       const { input } = req.body;
       const converted = convertNumberToPhonewords(input);
-      res.status(200).json({ result: converted });
+      if (converted.length < 2621439) {
+        res.status(200).json({ result: converted });
+      } else {
+        res.status(200).json({
+          result:
+            "Oops! This request cannot be handled because of large response size! API Routes are meant to respond quickly and are not intended to support responding with large amounts of data. Please reduce the length of your entry.",
+        });
+      }
     } catch (error) {
       console.log(error);
     }

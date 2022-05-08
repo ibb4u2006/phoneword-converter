@@ -1,4 +1,7 @@
-html,
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+    html,
 body {
   padding: 0;
   margin: 0;
@@ -52,3 +55,6 @@ code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
+`;
+
+export default GlobalStyles;

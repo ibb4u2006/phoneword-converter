@@ -63,3 +63,4 @@ Tech Stack :
 - Orbit by kiwi.com: UI Design System
 - Styled Components: For CSS in Javascript/Typescript functionality
 - Typescript: For static typing support
+- Jest/React Testing Library: Unit/Integration Testing

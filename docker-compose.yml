@@ -1,0 +1,17 @@
+services:
+  dev:
+    ports:
+      - 3000:3000
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/phoneword-converter
+      - /usr/src/phoneword-converter/node_modules
+      - /usr/src/phoneword-converter/.next
+  test:
+    build:
+      context: ./
+    environment:
+      - CI=true
+    command: yarn test
